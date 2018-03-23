@@ -2,6 +2,8 @@
 
 export OPAMYES=1
 
+opam update -u
+
 opam depext -ui \
   no-camlp4 \
   alcotest \

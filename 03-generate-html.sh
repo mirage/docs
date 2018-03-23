@@ -1,3 +1,3 @@
 #!/bin/sh -ex
 
-opam config exec -- odoc odig
+opam config exec -- odig odoc
