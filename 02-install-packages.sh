@@ -84,7 +84,6 @@ opam depext -ui \
   mirage-flow-unix \
   mirage-flow-rawlink \
   mirage-fs-unix \
-  mirage-http \
   mirage-logs \
   mirage-net-flow \
   mirage-net-solo5 \
