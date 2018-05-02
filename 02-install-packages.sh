@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-export OPAMYES=1
+export OPAMYES=true
 
 opam update -u
 
