@@ -9,7 +9,7 @@ steps:
     - "./03-generate-html.sh"
   plugins:
     docker#v1.1.1:
-      image: "ocaml/opam2-staging:debian-9-ocaml-4.05.0"
+      image: "ocaml/opam2-staging:debian-9-ocaml-4.05"
       workdir: /src
       always_pull: true
       environment:
