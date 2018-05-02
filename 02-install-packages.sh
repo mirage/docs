@@ -131,10 +131,9 @@ opam --yes depext -uyi -j 20 \
   x509 \
   xen-evtchn \
   xen-gnt \
-  xenctrl \
   yojson \
   xenstore \
   zarith-freestanding \
   odoc odig
-# to fix: dns-forward nbd qcow vhd-format ezirmin mirage-block-ccm git-mirage topkg-care git-unix irmin websocket fat-filesystem ansi-parse tlstunnel notty
+# to fix: dns-forward nbd qcow vhd-format ezirmin mirage-block-ccm git-mirage topkg-care git-unix irmin websocket fat-filesystem ansi-parse tlstunnel notty xenctrl
 # not relevant: owl tyxml-ppx
