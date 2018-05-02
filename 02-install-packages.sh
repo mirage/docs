@@ -2,7 +2,7 @@
 
 # opam update -u
 
-opam depext -uyi -j 20 \
+opam --yes depext -uyi -j 20 \
   alcotest \
   angstrom \
   anycache \
