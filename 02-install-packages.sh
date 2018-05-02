@@ -1,10 +1,8 @@
 #!/bin/sh -ex
 
-export OPAMYES=true
+# opam update -u
 
-opam update -u
-
-opam depext -ui \
+opam depext -uyi -j 20 \
   alcotest \
   angstrom \
   anycache \
