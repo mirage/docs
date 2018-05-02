@@ -2,5 +2,7 @@
 
 export OPAMYES=1
 
+. ./vars.sh
+
 rm -rf ~/.opam
-opam init -a --compiler=4.05.0
+opam init -a --compiler=${OCAML_VERSION}
