@@ -2,6 +2,11 @@
 
 # opam update -u
 
+opam switch
+opam list
+opam info opam-depext
+opam --yes install opam-depext
+
 opam --yes depext -uyi -j 20 \
   alcotest \
   angstrom \
