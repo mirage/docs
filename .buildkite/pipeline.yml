@@ -13,3 +13,8 @@ steps:
       environment:
       - OPAMYES=1
       - OPAMJOBS=24
+- label: "Deploy Docs"
+  command:
+    - "./04-push-docs.sh"
+  agents:
+    githubpusher: "true"
