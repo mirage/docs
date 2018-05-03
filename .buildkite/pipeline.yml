@@ -5,6 +5,7 @@ steps:
     docker: "true"
     arch: "amd64"
   command:
+    - "git -C /home/opam/opam-repository pull origin master && opam update -uy"
     - "./02-install-packages.sh && ./03-generate-html.sh"
   plugins:
     docker#v1.1.1:
