@@ -5,11 +5,10 @@ steps:
     docker: "true"
     os: "linux"
   command:
-    - "./02-install-packages.sh"
-    - "./03-generate-html.sh"
+    - "./02-install-packages.sh && ./03-generate-html.sh && ./04-push-docs.sh"
   plugins:
     docker#v1.1.1:
-      image: "ocaml/opam2-staging:debian-9-ocaml-4.05"
+      image: "ocaml/opam2-staging:debian-9-ocaml-4.06"
       workdir: /src
       always_pull: true
       environment:
