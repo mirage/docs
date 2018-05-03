@@ -1,12 +1,10 @@
 steps:
 - label: "Build Docs"
   agents:
-    arch: "amd64"
-    docker: "true"
     os: "linux"
-    githubpusher: "true"
+    docker: "true"
   command:
-    - "./02-install-packages.sh && ./03-generate-html.sh && ./04-push-docs.sh"
+    - "./02-install-packages.sh && ./03-generate-html.sh"
   plugins:
     docker#v1.1.1:
       image: "ocaml/opam2-staging:debian-9-ocaml-4.05"
