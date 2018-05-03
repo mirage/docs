@@ -4,7 +4,8 @@
 if [ "$BUILDKITE" != "" ]; then
   ssh-add -D;
   ssh-add ~/.ssh/id_rsa.mirage-docs
-  buildkite-agent artifact download odoc .
+  buildkite-agent artifact download docs.tbz .
+  tar -jcf docs.tbz
   DIR=.
 else
   DIR=/home/ocaml/.opam/${OCAML_VERSION}/var/cache/odig
