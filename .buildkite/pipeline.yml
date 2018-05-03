@@ -3,6 +3,7 @@ steps:
   agents:
     os: "linux"
     docker: "true"
+    arch: "amd64"
   command:
     - "./02-install-packages.sh && ./03-generate-html.sh"
   plugins:
