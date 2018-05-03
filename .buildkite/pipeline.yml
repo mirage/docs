@@ -13,6 +13,7 @@ steps:
       environment:
       - OPAMYES=1
       - OPAMJOBS=24
+- wait
 - label: "Deploy Docs"
   command:
     - "./04-push-docs.sh"
