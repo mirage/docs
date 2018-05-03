@@ -13,6 +13,7 @@ steps:
       environment:
       - OPAMYES=1
       - OPAMJOBS=24
+      - BUILDKITE=true
 - wait
 - label: "Deploy Docs"
   command:
