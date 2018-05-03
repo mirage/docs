@@ -4,6 +4,7 @@ steps:
     arch: "amd64"
     docker: "true"
     os: "linux"
+    githubpusher: "true"
   command:
     - "./02-install-packages.sh && ./03-generate-html.sh && ./04-push-docs.sh"
   plugins:
