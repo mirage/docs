@@ -8,8 +8,8 @@ steps:
     - "git -C /home/opam/opam-repository pull origin master && opam update -uy"
     - "opam --yes depext -uyi -j 20 `grep -v '^#' PACKAGES`"
     - "opam config exec -- odig odoc"
-    - "tar -C `opam config var prefix`/var/cache/odig -jcf docs.tbz odoc/"
-    - "buildkite-agent artifact upload docs.tbz"
+    - "tar -C `opam config var prefix`/var/cache/odig -jcf /home/opam/docs.tbz odoc/"
+    - "cd /home/opam && buildkite-agent artifact upload docs.tbz"
   plugins:
     docker#v1.1.1:
       image: "ocaml/opam2-staging:debian-9-ocaml-4.05"
