@@ -29,11 +29,11 @@ steps:
     - "git -C .gh-pages checkout --orphan gh-pages"
     - "git -C .gh-pages reset"
     - "git -C .gh-pages clean -dxf"
-    - "cp -r ${DIR}/odoc/* .gh-pages/"
+    - "cp -r ./odoc/* .gh-pages/"
     - "echo docs.mirage.io > .gh-pages/CNAME"
     - "git -C .gh-pages add ."
     - "git -C .gh-pages commit -m 'BuildKite Update'"
     - "git -C .gh-pages push origin gh-pages -f"
-    - "rm -rf .gh-pages"
+    - "rm -rf .gh-pages odoc"
   agents:
     githubpusher: "true"
