@@ -6,7 +6,10 @@ steps:
     arch: "amd64"
   command:
     - "git -C /home/opam/opam-repository pull origin master && opam update -uy"
-    - "./02-install-packages.sh && ./03-generate-html.sh"
+    - "opam --yes depext -uyi -j 20 `grep -v '^#' PACKAGES`"
+    - "opam config exec -- odig odoc"
+    - "tar -C `opam config var prefix`/var/cache/odig -jcf docs.tbz odoc/"
+    - "buildkite-agent artifact upload docs.tbz"
   plugins:
     docker#v1.1.1:
       image: "ocaml/opam2-staging:debian-9-ocaml-4.05"
@@ -16,11 +19,21 @@ steps:
       always_pull: true
       environment:
       - OPAMYES=1
-      - OPAMJOBS=24
-      - BUILDKITE=true
 - wait
 - label: "Deploy Docs"
   command:
-    - "./04-push-docs.sh"
+    - "ssh-add -D && ssh-add ~/.ssh/id_rsa.mirage-docs"
+    - "buildkite-agent artifact download docs.tbz . && tar -jxf docs.tbz"
+    - "rm -rf .gh-pages"
+    - "git clone git@github.com:mirage/docs .gh-pages --reference ."
+    - "git -C .gh-pages checkout --orphan gh-pages"
+    - "git -C .gh-pages reset"
+    - "git -C .gh-pages clean -dxf"
+    - "cp -r ${DIR}/odoc/* .gh-pages/"
+    - "echo docs.mirage.io > .gh-pages/CNAME"
+    - "git -C .gh-pages add ."
+    - "git -C .gh-pages commit -m 'BuildKite Update'"
+    - "git -C .gh-pages push origin gh-pages -f"
+    - "rm -rf .gh-pages"
   agents:
     githubpusher: "true"

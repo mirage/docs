@@ -1,1 +1,0 @@
-export OCAML_VERSION=4.05.0
