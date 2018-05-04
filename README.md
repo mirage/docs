@@ -1,6 +1,6 @@
 # docs.mirage.io
 
-[![Build status](https://badge.buildkite.com/ef64c563a52c6fc9153e298492f7e6e0efaf674e776f3474f4.svg)](https://buildkite.com/ocaml/mirage-docs)
+[![Build status](https://badge.buildkite.com/78d536aaefa0f6025bb4507c78bb2db2505be96a64e7d3b3da.svg)](https://buildkite.com/ocaml/docs-dot-mirage-dot-io)
 
 The scripts in this repository use the [OCaml Buildkite](https://buildkite.com/ocaml/mirage-docs) infrastructure to regularly
 build a snapshot of MirageOS libraries and generate their documentation using
