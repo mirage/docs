@@ -176,7 +176,6 @@
    ((dir dispatch)
     (upstream https://github.com/inhabitedtype/ocaml-dispatch.git)
     (ref 0.4.0))
-   ((dir depyt) (upstream https://github.com/samoht/depyt.git) (ref 0.2.0))
    ((dir conduit) (upstream https://github.com/mirage/ocaml-conduit.git)
     (ref v1.1.0))
    ((dir irc-client)
