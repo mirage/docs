@@ -38,3 +38,9 @@ mirage-flow-lwt
 mirage-flow-rawlink
 mirage-fs-unix
 mirage-net-unix
+odoc
+xenstore
+yojson
+xen-evtchn
+xen-gnt
+webmachine
