@@ -37,6 +37,8 @@ mirage-flow
 mirage-flow-lwt
 mirage-fs-unix
 mirage-net-unix
+opam-file-format
+parse-argv
 odoc
 xenstore
 yojson
