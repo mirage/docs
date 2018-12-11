@@ -35,3 +35,9 @@ mirage-console-unix
 mirage-device
 mirage-flow
 mirage-flow-lwt
+odoc
+xenstore
+yojson
+xen-evtchn
+xen-gnt
+webmachine
