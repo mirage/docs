@@ -45,12 +45,14 @@ pcap-format
 ppx_expect
 protocol-9p
 ptime
+randomconv
 re
 rresult
 shared-memory-ring
 stdio
 syslog-message
 tar
+tcpip
 tuntap
 tyre
 uri
