@@ -1,7 +1,6 @@
 alcotest
 angstrom
 atd
-atdgen
 base
 base64
 cohttp
@@ -14,7 +13,6 @@ duration
 ezjsonm
 ezxmlm
 functoria
-github
 hex
 hvsock
 io-page
