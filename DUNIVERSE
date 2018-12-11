@@ -52,6 +52,9 @@ mirage-fs-unix
 mirage-net-unix
 opam-file-format
 parse-argv
+re
+ptime
+protocol-9p
 odoc
 xenstore
 yojson
