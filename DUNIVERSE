@@ -28,3 +28,10 @@ logs-syslog
 lwt
 magic-mime
 mirage-block-lwt
+mirage-block-unix
+mirage-channel
+mirage-clock-unix
+mirage-console-unix
+mirage-device
+mirage-flow
+mirage-flow-lwt
