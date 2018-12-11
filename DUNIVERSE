@@ -37,9 +37,12 @@ mirage-fs-unix
 mirage-net-unix
 mirage-types
 mirage-types-lwt
+ocplib-endian
 odoc
 opam-file-format
 parse-argv
+pcap-format
+ppx_expect
 protocol-9p
 ptime
 re
