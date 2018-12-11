@@ -35,3 +35,6 @@ mirage-console-unix
 mirage-device
 mirage-flow
 mirage-flow-lwt
+mirage-flow-rawlink
+mirage-fs-unix
+mirage-net-unix
