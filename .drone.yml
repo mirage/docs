@@ -8,4 +8,5 @@ platform:
 steps:
 - name: build
   image: ocaml/opam2
-  commands: ./build
+  commands:
+  - ./build
