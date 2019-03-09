@@ -1,10 +1,10 @@
 #!/bin/sh -ex
 export OPAMJOBS=80
-grep -v '^#' > /home/opam/PACKAGES
+grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
-opam pin add -n --dev odoc
-opam --yes depext -uyi `cat PACKAGES`
+#opam pin add -n --dev odoc
+opam --yes depext -uyi `cat TOBUILD`
 opam exec -- odig odoc
 tar -C `opam config var prefix`/var/cache/odig -jcf /home/opam/docs.tbz odoc/
 git clone git://github.com/mirage/docs .gh-pages --reference .
@@ -14,6 +14,6 @@ git -C .gh-pages clean -dxf
 cp -r ./odoc/* .gh-pages/
 echo docs.mirage.io > .gh-pages/CNAME
 git -C .gh-pages add .
-git -C .gh-pages commit -m 'BuildKite Update'
+git -C .gh-pages commit -m 'Bot Update'
 git -C .gh-pages push origin gh-pages -f
 rm -rf .gh-pages odoc
