@@ -1,5 +1,6 @@
 #!/bin/sh -e
 export OPAMJOBS=80
+export OPAMYES=1
 
 THEME=dark
 TITLE="MirageOS Docs"
@@ -7,8 +8,9 @@ TITLE="MirageOS Docs"
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
-opam --yes depext -uyi `cat TOBUILD`
+opam pin add -n --dev odoc
 opam install -y odig
+opam --yes depext -uyi `cat TOBUILD`
 opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}"
 
 if [ "${SSH_KEY}" = "" ]; then
@@ -18,6 +20,7 @@ else
   chmod 600 ~/.ssh/docs.mirage.io
   eval `ssh-agent -s`
   ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
+  ssh-keyscan -H github.com >> ~/.ssh/known_hosts
   git clone git@github.com:mirage/docs .gh-pages
   git -C .gh-pages checkout --orphan gh-pages
   git -C .gh-pages reset
