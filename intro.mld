@@ -16,14 +16,16 @@ event-driven using the Lwt framework, with no support for preemptive threading.
 The MirageOS ecosystem provides a growing number of OCaml libraries that you
 can link into your application.  Browse them here {{:#by-name}by name}, {{:#by-tag}by tag},
 the {{:ocaml/Stdlib/index.html#modules}standard library}
-and the {{:ocaml-manual/index.html}OCaml manual}.
+and the {{:ocaml-manual/index.html}OCaml manual}.  You can contribute more
+libraries to this site by sending a pull request to the
+{{:https://github.com/mirage/docs}PACKAGES} file with the new packages.
 
 {%html:
-<p>
+<div>
 <img src="mirage-logo1.svg" width="120px" />
 <img src="mirage-logo2.svg" width="120px" />
 <img src="mirage-logo3.svg" width="120px" />
-</p>
+</div>
 <nav class="toc"><ul>
 </li><li><a href="#by-name">Packages by name</a>
 </li><li><a href="#by-tag">Packages by tag</a>
