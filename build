@@ -18,7 +18,7 @@ else
   chmod 600 ~/.ssh/docs.mirage.io
   eval `ssh-agent -s`
   ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
-  git clone git://github.com/mirage/docs .gh-pages --reference .
+  git clone git://github.com/mirage/docs .gh-pages
   git -C .gh-pages checkout --orphan gh-pages
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
