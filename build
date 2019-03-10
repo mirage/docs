@@ -1,19 +1,30 @@
-#!/bin/sh -ex
+#!/bin/sh -e
 export OPAMJOBS=80
+
+THEME=dark
+TITLE="MirageOS Docs"
+
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
-#opam pin add -n --dev odoc
 opam --yes depext -uyi `cat TOBUILD`
-opam exec -- odig odoc
-tar -C `opam config var prefix`/var/cache/odig -jcf /home/opam/docs.tbz odoc/
-git clone git://github.com/mirage/docs .gh-pages --reference .
-git -C .gh-pages checkout --orphan gh-pages
-git -C .gh-pages reset
-git -C .gh-pages clean -dxf
-cp -r ./odoc/* .gh-pages/
-echo docs.mirage.io > .gh-pages/CNAME
-git -C .gh-pages add .
-git -C .gh-pages commit -m 'Bot Update'
-git -C .gh-pages push origin gh-pages -f
-rm -rf .gh-pages odoc
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}"
+
+if [ "${SSH_KEY}" = "" ]; then
+  echo no ssh key secret defined, so not trying to push
+else
+  echo "${SSH_KEY}" > ~/.ssh/docs.mirage.io
+  chmod 600 ~/.ssh/docs.mirage.io
+  eval `ssh-agent -s`
+  ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
+  git clone git://github.com/mirage/docs .gh-pages --reference .
+  git -C .gh-pages checkout --orphan gh-pages
+  git -C .gh-pages reset
+  git -C .gh-pages clean -dxf
+  cp -r `odig cache path`/html .gh-pages/
+  echo docs.mirage.io > .gh-pages/CNAME
+  git -C .gh-pages add .
+  git -C .gh-pages commit -m 'Bot Update'
+  git -C .gh-pages push origin gh-pages -f
+  rm -rf .gh-pages odoc
+fi
