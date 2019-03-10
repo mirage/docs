@@ -20,7 +20,6 @@ cpuid
 crunch
 cstruct
 ctypes
-ctypes-foreign
 datakit
 datakit-ci
 decompress
@@ -37,8 +36,10 @@ functoria
 git
 github
 gmp-freestanding
+graphql-lwt
 hex
 hkdf
+httpaf
 hvsock
 integers
 io-page
@@ -78,7 +79,7 @@ mirage-dns
 mirage-entropy
 mirage-flow
 mirage-flow-lwt
-mirage-flow-rawlink
+#mirage-flow-rawlink
 mirage-flow-unix
 mirage-fs-unix
 mirage-kv-unix
@@ -96,7 +97,6 @@ mirage-vnetif
 mirage-xen
 nocrypto
 obytelib
-ocamlclean
 ocaml-freestanding
 ocplib-endian
 odig
@@ -136,4 +136,3 @@ xen-evtchn
 xen-gnt
 xenstore
 yojson
-zarith-freestanding
