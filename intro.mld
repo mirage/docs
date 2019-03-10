@@ -19,17 +19,16 @@ the {{:ocaml/Stdlib/index.html#modules}standard library}
 and the {{:ocaml-manual/index.html}OCaml manual}.
 
 {%html:
-<p>
-<li><img src="mirage-logo1.svg" width="120px" />
-<li><img src="mirage-logo2.svg" width="120px" />
-<li><img src="mirage-logo3.svg" width="120px" />
-</p>
 <nav class="toc"><ul>
+<li><img src="mirage-logo3.svg" width="120px" />
 </li><li><a href="#by-name">Packages by name</a>
 </li><li><a href="#by-tag">Packages by tag</a>
+</li><li><img src="mirage-logo2.svg" width="120px" />
 </li><li><a href="ocaml/Stdlib/index.html#modules">OCaml standard library</a>
 </li><li><a href="ocaml-manual/index.html">OCaml manual</a>
-</li><li><a href="https://mirage.io">MirageOS homepage</a></li></ul>
+</li><li><img src="mirage-logo1.svg" width="120px" />
+</li><li><a href="https://mirage.io">MirageOS homepage</a>
+</li><li><a href="https://ocsigen.org/lwt">Lwt homepage</a></li></ul>
 </nav>
 %}
 
