@@ -48,7 +48,7 @@ jsonm
 logs
 logs-syslog
 lru-cache
-lwt.4.1.0
+lwt
 magic-mime
 merlin
 mirage
