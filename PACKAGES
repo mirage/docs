@@ -24,6 +24,7 @@ ctypes-foreign
 datakit
 datakit-ci
 depyt
+diet
 dns
 dockerfile
 duration
@@ -90,7 +91,6 @@ nocrypto
 obytelib
 ocamlclean
 ocaml-freestanding
-ocb-stubblr
 ocplib-endian
 odig
 odoc

@@ -1,0 +1,37 @@
+#!/bin/sh -e
+
+THEME=dark
+TITLE="MirageOS Docs"
+
+export OPAMJOBS=80
+export OPAMYES=1
+
+grep -v '^#' PACKAGES > /home/opam/TOBUILD
+cp intro.mld /home/opam/intro.mld
+sudo chown opam /home/opam/intro.mld
+cd /home/opam
+git -C /home/opam/opam-repository pull origin master && opam update -uy
+opam pin add -n --dev odoc
+opam --yes depext -uyi odig `cat TOBUILD`
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld `cat TOBUILD`
+
+if [ "${SSH_KEY}" = "" ]; then
+  echo no ssh key secret defined, so not trying to push
+else
+  echo "${SSH_KEY}" > ~/.ssh/docs.mirage.io
+  chmod 600 ~/.ssh/docs.mirage.io
+  eval `ssh-agent -s`
+  ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
+  ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+  git clone git@github.com:mirage/docs .gh-pages
+  git -C .gh-pages checkout --orphan gh-pages
+  git -C .gh-pages reset
+  git -C .gh-pages clean -dxf
+  rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
+  echo docs.mirage.io > .gh-pages/CNAME
+  touch .gh-pages/.nojekyll
+  git -C .gh-pages add .
+  git -C .gh-pages commit -m 'Bot Update' --quiet
+  git -C .gh-pages push origin gh-pages -f
+  rm -rf .gh-pages odoc
+fi
