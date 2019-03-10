@@ -11,7 +11,7 @@ than with a full conventional software stack.  MirageOS uses the OCaml
 language, with libraries that provide networking, storage and concurrency
 support that work under Unix during development, but become operating system
 drivers when being compiled for production deployment.  The framework is fully
-event-driven using the Lwt framework.
+event-driven using the {!Lwt} framework.
 
 The MirageOS ecosystem provides a growing number of OCaml libraries that you
 can link into your application.  Browse them here {{:#by-name}by name}, {{:#by-tag}by tag},

@@ -33,8 +33,10 @@ functoria
 git
 github
 gmp-freestanding
+graphql-lwt
 hex
 hkdf
+httpaf
 hvsock
 integers
 io-page
