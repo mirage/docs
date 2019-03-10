@@ -25,7 +25,7 @@ else
   git -C .gh-pages checkout --orphan gh-pages
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
-  cp -r `opam exec -- odig cache path`/html .gh-pages/
+  rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
   echo docs.mirage.io > .gh-pages/CNAME
   git -C .gh-pages add .
   git -C .gh-pages commit -m 'Bot Update'
