@@ -8,7 +8,8 @@ export OPAMYES=1
 
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cp intro.mld /home/opam/intro.mld
-sudo chown opam /home/opam/intro.mld
+cp theme.css /home/opam/theme.css
+sudo chown opam /home/opam/intro.mld /home/opam/theme.css
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
 opam pin add -n --dev odoc
@@ -28,6 +29,7 @@ else
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
   rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
+  cp /home/opam/theme.css .gh-pages/_odoc-theme/theme.css
   echo docs.mirage.io > .gh-pages/CNAME
   touch .gh-pages/.nojekyll
   git -C .gh-pages add .
