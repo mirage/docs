@@ -1,3 +1,31 @@
-This is the library documentation for the MirageOS unikernel framework.
+{0:MirageOS package documentation}
 
-<img src="https://github.com/avsm/dune/pull/new/fix-dune-config" />
+MirageOS is a library operating system that constructs unikernels for secure,
+high-performance network applications across a variety of cloud computing and
+mobile platforms. Code can be developed on a normal OS such as Linux or MacOS
+X, and then compiled into a fully-standalone, specialised unikernel that runs
+under a Xen or KVM hypervisor.
+
+This lets your services run more efficiently, securely and with finer control
+than with a full conventional software stack.  MirageOS uses the OCaml
+language, with libraries that provide networking, storage and concurrency
+support that work under Unix during development, but become operating system
+drivers when being compiled for production deployment.  The framework is fully
+event-driven using the Lwt framework, with no support for preemptive threading.
+
+The MirageOS ecosystem provides a growing number of OCaml libraries that you
+can link into your application.  Browse them here {{:#by-name}by name}, {{:#by-tag}by tag},
+the {{:ocaml/Stdlib/index.html#modules}standard library}
+and the {{:ocaml-manual/index.html}OCaml manual}.
+
+{%html:
+<nav class="toc"><ul>
+<li><img src="logo1.svg" width="100px" />
+</li><li><a href="#by-name">Packages by name</a>
+</li><li><a href="#by-tag">Packages by tag</a>
+</li><li><a href="ocaml/Stdlib/index.html#modules">OCaml standard library</a>
+</li><li><a href="ocaml-manual/index.html">OCaml manual</a>
+</li><li><a href="https://mirage.io">MirageOS homepage</a></li></ul>
+</nav>
+%}
+
