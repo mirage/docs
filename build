@@ -11,7 +11,7 @@ cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
 opam pin add -n --dev odoc
 opam --yes depext -uyi odig `cat TOBUILD`
-opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/root/intro.mld
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/root/intro.mld `cat TOBUILD`
 
 if [ "${SSH_KEY}" = "" ]; then
   echo no ssh key secret defined, so not trying to push
