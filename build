@@ -27,6 +27,7 @@ else
   git -C .gh-pages clean -dxf
   rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
   echo docs.mirage.io > .gh-pages/CNAME
+  touch .gh-pages/.nojekyll
   git -C .gh-pages add .
   git -C .gh-pages commit -m 'Bot Update' --quiet
   git -C .gh-pages push origin gh-pages -f
