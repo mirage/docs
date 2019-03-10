@@ -1,9 +1,10 @@
 #!/bin/sh -e
-export OPAMJOBS=80
-export OPAMYES=1
 
 THEME=dark
 TITLE="MirageOS Docs"
+
+export OPAMJOBS=80
+export OPAMYES=1
 
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cd /home/opam
