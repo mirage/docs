@@ -27,9 +27,9 @@ libraries to this site by sending a pull request to the
 </li><li><a href="ocaml/Stdlib/index.html#modules">OCaml standard library</a>
 </li><li><a href="ocaml-manual/index.html">OCaml manual</a>
 </li><li><a href="https://mirage.io">MirageOS homepage</a>
-</li><li><img src="mirage-logo3.svg" width="130px" />
-</li><li><img src="mirage-logo2.svg" width="130px" />
-</li><li><img src="mirage-logo1.svg" width="130px" />
+</li><li><img src="mirage-logo3.svg" width="100px" />
+</li><li><img src="mirage-logo2.svg" width="100px" />
+</li><li><img src="mirage-logo1.svg" width="100px" />
 </li></ul>
 </nav>
 %}
