@@ -7,11 +7,13 @@ export OPAMJOBS=80
 export OPAMYES=1
 
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
+cp intro.mld /home/opam/intro.mld
+sudo chown opam /home/opam/intro.mld
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
 opam pin add -n --dev odoc
 opam --yes depext -uyi odig `cat TOBUILD`
-opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/root/intro.mld `cat TOBUILD`
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld `cat TOBUILD`
 
 if [ "${SSH_KEY}" = "" ]; then
   echo no ssh key secret defined, so not trying to push
