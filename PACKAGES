@@ -51,7 +51,7 @@ irc-client
 irmin-watcher
 jekyll-format
 jsonm
-launchd
+# launchd
 logs
 logs-syslog
 lru-cache
