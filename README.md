@@ -1,8 +1,8 @@
 # docs.mirage.io
 
-[![Build status](https://badge.buildkite.com/78d536aaefa0f6025bb4507c78bb2db2505be96a64e7d3b3da.svg)](https://buildkite.com/ocaml/docs-dot-mirage-dot-io)
+[![Build Status](https://cloud.drone.io/api/badges/mirage/docs/status.svg)](https://cloud.drone.io/mirage/docs)
 
-The scripts in this repository use the [OCaml Buildkite](https://buildkite.com/ocaml/mirage-docs) infrastructure to regularly
+The scripts in this repository use the [Drone CI cloud](https://cloud.drone.io/mirage/docs/) infrastructure to regularly
 build a snapshot of MirageOS libraries and generate their documentation using
 [odoc](https://github.com/ocaml/odoc).  The HTML is then pushed to the
 `gh-pages` branch of this repository, and is served at
