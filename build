@@ -30,7 +30,6 @@ else
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
   rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
-  sed -ie 's,<nav>🐫</nav>,,g' .gh-pages/index.html
   cp /home/opam/theme.css .gh-pages/_odoc-theme/theme.css
   cp /home/opam/*.svg .gh-pages/
   echo docs.mirage.io > .gh-pages/CNAME
