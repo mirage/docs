@@ -16,7 +16,7 @@ git -C /home/opam/opam-repository pull origin master && opam update -uy
 opam pin add -n --dev odoc
 opam repo set-url default https://opam.ocaml.org/
 opam --yes depext -uyi odig `cat TOBUILD`
-opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld `cat TOBUILD`
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld 
 
 if [ "${SSH_KEY}" = "" ]; then
   echo no ssh key secret defined, so not trying to push
