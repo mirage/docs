@@ -131,7 +131,7 @@ shared-memory-ring
 stdio
 syslog-message
 tar
-tar-mirage
+# tar-mirage
 tcpip
 tls
 tuntap
