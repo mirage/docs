@@ -29,6 +29,7 @@ depyt
 diet
 dns
 dockerfile
+dockerfile-opam
 duration
 eqaf
 ethernet
@@ -105,6 +106,7 @@ mirage-xen
 nocrypto
 obytelib
 ocaml-freestanding
+ocaml-manual
 ocplib-endian
 odig
 odoc
@@ -122,11 +124,14 @@ re
 rresult
 scrypt-kdf
 session
+session-cohttp-lwt
+session-webmachine
 shared-memory-ring
 # solo5-kernel-virtio - not coinstallable due to conflicts
 stdio
 syslog-message
 tar
+tar-mirage
 tcpip
 tls
 tuntap
