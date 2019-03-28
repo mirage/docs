@@ -59,7 +59,7 @@ lwt
 lwt-dllist
 magic-mime
 merlin
-mirage
+mirage.3.5.0
 mirage-block
 mirage-block-lwt
 mirage-block-ramdisk
@@ -115,6 +115,7 @@ pcap-format
 ppx_expect
 prometheus
 protocol-9p
+protocol-9p-unix
 ptime
 randomconv
 re
