@@ -29,6 +29,7 @@ depyt
 diet
 dns
 dockerfile
+dockerfile-opam
 duration
 eqaf
 ethernet
@@ -85,11 +86,12 @@ mirage-flow
 mirage-flow-lwt
 mirage-flow-rawlink
 mirage-flow-unix
-mirage-fs-unix
+#mirage-fs-unix - deprecated
 mirage-kv-mem
+mirage-kv-lwt
 mirage-kv-unix
 mirage-logs
-mirage-net-flow
+# mirage-net-flow - mirage-net-lwt<2
 mirage-net-solo5
 mirage-net-unix
 mirage-net-xen
@@ -97,13 +99,14 @@ mirage-os-shim
 mirage-random
 mirage-solo5
 mirage-types
-mirage-types-lwt
+mirage-types-lwt.3.5.0
 mirage-unix
 mirage-vnetif
 mirage-xen
 nocrypto
 obytelib
 ocaml-freestanding
+ocaml-manual
 ocplib-endian
 odig
 odoc
@@ -122,11 +125,14 @@ re
 rresult
 scrypt-kdf
 session
+session-cohttp-lwt
+session-webmachine
 shared-memory-ring
-solo5-kernel-virtio
+# solo5-kernel-virtio - not coinstallable due to conflicts
 stdio
 syslog-message
 tar
+# tar-mirage
 tcpip
 tls
 tuntap
