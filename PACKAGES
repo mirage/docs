@@ -40,6 +40,9 @@ git
 github
 gmp-freestanding
 graphql-lwt
+h2
+h2-mirage
+h2-lwt-unix
 hex
 hkdf
 httpaf
