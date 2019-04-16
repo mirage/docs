@@ -23,6 +23,7 @@ cstruct
 csv
 ctypes
 datakit
+datakit-bridge-local-git
 datakit-ci
 decompress
 depyt
@@ -47,6 +48,7 @@ h2-lwt-unix
 hex
 hkdf
 httpaf
+httpaf-async
 hvsock
 integers
 io-page
