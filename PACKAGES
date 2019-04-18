@@ -10,7 +10,7 @@ atdgen
 base
 base64
 camlzip
-charrua-unix
+#charrua-unix
 cmdliner
 cohttp
 conduit
@@ -19,7 +19,7 @@ cow
 cowabloga
 cpuid
 crunch
-cstruct
+cstruct.4.0.0
 csv
 ctypes
 datakit
