@@ -13,7 +13,7 @@ camlzip
 charrua-unix
 charrua-server
 charrua-client-lwt
-charrua-mirage
+charrua-client-mirage
 cmdliner
 cohttp
 conduit
