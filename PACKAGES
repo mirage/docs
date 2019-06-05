@@ -10,10 +10,6 @@ atdgen
 base
 base64
 camlzip
-charrua-unix
-charrua-server
-charrua-client-lwt
-charrua-client-mirage
 cmdliner
 cohttp
 conduit
@@ -134,7 +130,6 @@ protocol-9p-unix
 ptime
 randomconv
 re
-rfc1951
 rresult
 scrypt-kdf
 session
