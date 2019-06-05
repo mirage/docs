@@ -31,10 +31,12 @@ datakit-ci
 decompress
 depyt
 diet
+digestif
 dns
 dockerfile
 dockerfile-opam
 duration
+encore
 eqaf
 ethernet
 ezjsonm
@@ -61,6 +63,7 @@ irc-client
 irmin-watcher
 jekyll-format
 jsonm
+ke
 # launchd
 logs
 logs-syslog
@@ -131,6 +134,7 @@ protocol-9p-unix
 ptime
 randomconv
 re
+rfc1951
 rresult
 scrypt-kdf
 session
