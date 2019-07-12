@@ -32,6 +32,7 @@ dns
 dockerfile
 dockerfile-opam
 duration
+emile
 encore
 eqaf
 ethernet
@@ -51,6 +52,7 @@ hex
 hkdf
 httpaf
 httpaf-async
+hxd
 hvsock
 integers
 io-page
@@ -111,7 +113,7 @@ mirage-types
 mirage-types-lwt.3.5.0
 mirage-unix
 mirage-vnetif
-mirage-xen
+mirage-xen.4.0.0
 nocrypto
 obytelib
 ocaml-freestanding
@@ -147,6 +149,7 @@ tls
 tuntap
 tyre
 uri
+uri-sexp
 utop
 uucp
 uuseg
