@@ -9,6 +9,7 @@ atd
 atdgen
 base
 base64
+bloomf
 camlzip
 cmdliner
 cohttp
@@ -70,8 +71,9 @@ lru-cache
 lwt
 lwt-dllist
 magic-mime
+markup
 merlin
-mirage.3.5.0
+mirage.3.5.1
 mirage-block
 mirage-block-lwt
 mirage-block-ramdisk
@@ -110,10 +112,10 @@ mirage-os-shim
 mirage-random
 mirage-solo5
 mirage-types
-mirage-types-lwt.3.5.0
+mirage-types-lwt.3.5.1
 mirage-unix
 mirage-vnetif
-mirage-xen.4.0.0
+mirage-xen
 nocrypto
 obytelib
 ocaml-freestanding
@@ -126,6 +128,7 @@ otr
 parse-argv
 pbkdf
 pcap-format
+pecu
 ppx_expect
 prometheus
 protocol-9p
@@ -133,6 +136,7 @@ protocol-9p-unix
 ptime
 randomconv
 re
+rfc1951
 rresult
 scrypt-kdf
 session
