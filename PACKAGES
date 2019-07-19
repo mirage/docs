@@ -1,6 +1,5 @@
 alcotest
 angstrom
-anycache
 arp
 asn1-combinators
 astring
@@ -11,6 +10,12 @@ base
 base64
 bloomf
 camlzip
+charrua
+charrua-client
+charrua-client-lwt
+charrua-client-mirage
+charrua-server
+charrua-unix
 cmdliner
 cohttp
 conduit
