@@ -79,7 +79,7 @@ lwt-dllist
 magic-mime
 markup
 merlin
-mirage.3.5.1
+mirage.3.6.0
 mirage-block
 mirage-block-lwt
 mirage-block-ramdisk
@@ -118,7 +118,6 @@ mirage-os-shim
 mirage-random
 mirage-solo5
 mirage-types
-mirage-types-lwt.3.5.1
 mirage-unix
 mirage-vnetif
 mirage-xen
