@@ -20,6 +20,8 @@ and the {{:ocaml-manual/index.html}OCaml manual}.  You can contribute more
 libraries to this site by sending a pull request to the
 {{:https://github.com/mirage/docs}PACKAGES} file with the new packages.
 
+This page was built on %%DATE%%.
+
 {%html:
 <nav class="toc"><ul>
      <li><a href="https://mirage.io">MirageOS homepage</a>

@@ -17,6 +17,7 @@ git -C /home/opam/opam-repository pull origin master && opam update -uy
 #opam repo set-url default https://opam.ocaml.org/
 echo 'archive-mirrors: [ "https://opam.ocaml.org/" ]' >> /home/opam/.opam/config
 opam --yes depext -uyi odig `cat TOBUILD`
+sed -i -e "s/%%DATE%%/`date`/g" /home/opam/intro.mld
 opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld 
 
 if [ "${SSH_KEY}" = "" ]; then
