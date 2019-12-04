@@ -27,9 +27,6 @@ crunch
 cstruct
 csv
 ctypes
-datakit
-datakit-bridge-local-git
-datakit-ci
 decompress
 depyt
 diet
@@ -60,12 +57,26 @@ hkdf
 httpaf
 httpaf-async
 hxd
-hvsock
+#hvsock - new mirage-flow
 integers
 io-page
 io-page-unix
 ipaddr
 irc-client
+irmin.2.0.0
+irmin-chunk
+irmin-fs
+irmin-git
+irmin-graphql
+irmin-http
+#irmin-indexeddb
+irmin-mem
+irmin-mirage
+irmin-mirage-git
+irmin-mirage-graphql
+irmin-pack
+irmin-test
+irmin-unix
 irmin-watcher
 jekyll-format
 jsonm
@@ -81,7 +92,6 @@ markup
 merlin
 mirage.3.6.0
 mirage-block
-mirage-block-lwt
 mirage-block-ramdisk
 mirage-block-solo5
 mirage-block-unix
@@ -92,29 +102,28 @@ mirage-btrees
 mirage-channel
 mirage-clock-freestanding
 mirage-clock-unix
-mirage-conduit
+#mirage-conduit - obsolete
 mirage-console-solo5
 mirage-console-unix
 mirage-console-xen
 mirage-console-xen-backend
 mirage-console-xen-proto
 mirage-device
-mirage-dns
+#mirage-dns - outdated?
 mirage-entropy
 mirage-flow
-mirage-flow-lwt
-mirage-flow-rawlink
+#mirage-flow-rawlink
 mirage-flow-unix
 #mirage-fs-unix - deprecated
+mirage-kv
 mirage-kv-mem
-mirage-kv-lwt
 mirage-kv-unix
 mirage-logs
 # mirage-net-flow - mirage-net-lwt<2
 mirage-net-solo5
 mirage-net-unix
 mirage-net-xen
-mirage-os-shim
+#mirage-os-shim - obs
 mirage-random
 mirage-solo5
 mirage-types
@@ -136,8 +145,8 @@ pcap-format
 pecu
 ppx_expect
 prometheus
-protocol-9p
-protocol-9p-unix
+#protocol-9p
+#protocol-9p-unix - irmin cconflict
 ptime
 randomconv
 re
@@ -152,7 +161,7 @@ shared-memory-ring
 stdio
 syslog-message
 tar
-tar-mirage
+#tar-mirage - needs new mirage-kv
 tcpip
 tls
 tuntap
