@@ -5,6 +5,7 @@ TITLE="MirageOS Docs"
 
 export OPAMJOBS=80
 export OPAMYES=1
+export OPAMSOLVERTIMEOUT=500
 
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cp intro.mld /home/opam/intro.mld
@@ -13,7 +14,6 @@ cp *.svg /home/opam/
 sudo chown opam /home/opam/intro.mld /home/opam/theme.css /home/opam/*.svg
 cd /home/opam
 git -C /home/opam/opam-repository pull origin master && opam update -uy
-opam pin add -n --dev odoc
 #opam repo set-url default https://opam.ocaml.org/
 echo 'archive-mirrors: [ "https://opam.ocaml.org/" ]' >> /home/opam/.opam/config
 opam --yes depext -uyi odig `cat TOBUILD`
