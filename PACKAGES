@@ -32,6 +32,7 @@ depyt
 diet
 digestif
 dns
+dns-client
 dockerfile
 dockerfile-opam
 down
@@ -90,7 +91,8 @@ lwt-dllist
 magic-mime
 markup
 merlin
-mirage.3.6.0
+metrics
+mirage
 mirage-block
 mirage-block-ramdisk
 mirage-block-solo5
