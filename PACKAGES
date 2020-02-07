@@ -64,7 +64,7 @@ io-page
 io-page-unix
 ipaddr
 irc-client
-irmin.2.0.0
+irmin
 irmin-chunk
 irmin-fs
 irmin-git
