@@ -19,7 +19,7 @@ echo 'archive-mirrors: [ "https://opam.ocaml.org/" ]' >> /home/opam/.opam/config
 opam pin add -n odoc https://github.com/jonludlam/odoc.git#docs-mirage-io-test
 opam --yes depext -uyi odig `cat TOBUILD`
 sed -i -e "s/%%DATE%%/`date`/g" /home/opam/intro.mld
-opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld 
+opam exec -- odig odoc -v --odoc-theme=odig.${THEME} --index-title="${TITLE}" --index-intro=/home/opam/intro.mld   || true
 
 if [ "${SSH_KEY}" = "" ]; then
   echo no ssh key secret defined, so not trying to push
