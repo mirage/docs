@@ -48,7 +48,7 @@ table { border-collapse: collapse; border-spacing: 0; }
 body { background-color: var(--color-bg);
        color: var(--color-fg); }
 
-.content, header
+.content
 { font-size: var(--size-font);
   font-family: var(--font-body), sans-serif;
   font-weight: 400;
@@ -58,8 +58,7 @@ body { background-color: var(--color-bg);
   max-width: 120ch;
   margin: 0 auto;
   padding: calc(1.5 * var(--size-line));
-  padding-top: calc(0.5 * var(--size-line));
-  padding-right: 300px }
+  padding-top: calc(0.5 * var(--size-line)); }
 
 .content > * { max-width: 78ch; width: 75% }
 .toc
