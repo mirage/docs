@@ -29,7 +29,7 @@ else
   eval `ssh-agent -s`
   ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
   ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-  git clone https://github.com/mirage/docs .gh-pages
+  git clone git@github.com:mirage/docs .gh-pages
   git -C .gh-pages checkout --orphan gh-pages
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
