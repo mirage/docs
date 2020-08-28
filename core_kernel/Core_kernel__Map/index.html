@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head><title>Core_kernel__Map (core_kernel.Core_kernel__Map)</title><link rel="stylesheet" href="../../_odoc-theme/odoc.css"/><meta charset="utf-8"/><meta name="generator" content="odoc v1.1.1-1373-g2e7c1c75"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><script src="../../highlight.pack.js"></script><script>hljs.initHighlightingOnLoad();</script></head><body><nav><a href="../index.html">Up</a> – <a href="../index.html">core_kernel</a> &#x00BB; Core_kernel__Map</nav><header><h1>Module <code>Core_kernel__Map</code></h1><p><code>Map</code> is a functional data structure (balanced binary tree) implementing finite maps over a totally-ordered domain, called a &quot;key&quot;.</p><p>For example:</p><pre><code>let empty = Map.empty (module String)
+let numbers =
+  Map.of_alist_exn (module String)
+    [&quot;three&quot;, Substr &quot;three&quot;; &quot;four&quot;, Substr &quot;four&quot;]</code></pre><p>Note that the functions in Map are polymorphic over the type of the key and of the data; you just need to pass in the first-class module for the key type (here, <code>String</code>).</p><p>Suppose you wanted to define a new module <code>Foo</code> to use in a map. You would write:</p><pre><code>module Foo = struct
+  module T = struct
+    type t = int * int
+    let compare x y = Tuple2.compare Int.compare Int.compare
+    let sexp_of_t = Tuple2.sexp_of_t Int.sexp_of_t Int.sexp_of_t
+  end
+  include T
+  include Comparable.Make(T)
+end</code></pre><p>This gives you a module <code>Foo</code> with the appropriate comparator in it, and then this:</p><pre><code>let m = Map.empty (module Foo)</code></pre><p>lets you create a map keyed by <code>Foo</code>. The reason you need to write a sexp-converter and a comparison function for this to work is that maps both need comparison and the ability to serialize the key for generating useful errors. It's yet nicer to do this with the appropriate PPXs:</p><pre><code>module Foo = struct
+  module T =
+  struct  type t = int * int [@@deriving sexp_of, compare]  end
+  include T
+  include Comparable.Make(T)
+end</code></pre><h3 id="the-interface"><a href="#the-interface" class="anchor"></a>The interface</h3></header><div class="content"></div></body></html>
