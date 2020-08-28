@@ -10,6 +10,7 @@ export OPAMSOLVERTIMEOUT=500
 grep -v '^#' PACKAGES > /home/opam/TOBUILD
 cp intro.mld /home/opam/intro.mld
 cp theme.css /home/opam/theme.css
+cp odoc-css.patch /home/opam/odoc-css.patch
 cp *.svg /home/opam/
 sudo chown opam /home/opam/intro.mld /home/opam/theme.css /home/opam/*.svg
 cd /home/opam
@@ -38,7 +39,7 @@ else
   cp .gh-pages/_odoc-theme/odoc.css .gh-pages/_odoc-theme/odoc-orig.css
   sed -iorig s/odoc.css/odoc-orig.css/g .gh-pages/index.html
   cd .gh-pages/_odoc-theme
-  patch -p0 < /root/odoc-css.patch
+  patch -p0 < /home/opam/odoc-css.patch
   cd ../..
   cp /home/opam/*.svg .gh-pages/
   echo docs.mirage.io > .gh-pages/CNAME
