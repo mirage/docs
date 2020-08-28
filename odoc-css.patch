@@ -1,0 +1,21 @@
+--- odoc-orig.css	2020-08-28 10:36:42.000000000 +0100
++++ odoc.css	2020-08-28 10:57:00.000000000 +0100
+@@ -48,7 +48,7 @@
+ body { background-color: var(--color-bg);
+        color: var(--color-fg); }
+ 
+-.content
++.content, header
+ { font-size: var(--size-font);
+   font-family: var(--font-body), sans-serif;
+   font-weight: 400;
+@@ -58,7 +58,8 @@
+   max-width: 120ch;
+   margin: 0 auto;
+   padding: calc(1.5 * var(--size-line));
+-  padding-top: calc(0.5 * var(--size-line)); }
++  padding-top: calc(0.5 * var(--size-line));
++  padding-right: 300px }
+ 
+ .content > * { max-width: 78ch; width: 75% }
+ .toc

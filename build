@@ -29,12 +29,17 @@ else
   eval `ssh-agent -s`
   ssh-add -D && ssh-add ~/.ssh/docs.mirage.io
   ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-  git clone git@github.com:mirage/docs .gh-pages
+  git clone https://github.com/mirage/docs .gh-pages
   git -C .gh-pages checkout --orphan gh-pages
   git -C .gh-pages reset
   git -C .gh-pages clean -dxf
   rsync -aL `opam exec -- odig cache path`/html/ .gh-pages/
   cp /home/opam/theme.css .gh-pages/_odoc-theme/theme.css
+  cp .gh-pages/_odoc-theme/odoc.css .gh-pages/_odoc-theme/odoc-orig.css
+  sed -iorig s/odoc.css/odoc-orig.css/g .gh-pages/index.html
+  cd .gh-pages/_odoc-theme
+  patch -p0 < /root/odoc-css.patch
+  cd ../..
   cp /home/opam/*.svg .gh-pages/
   echo docs.mirage.io > .gh-pages/CNAME
   touch .gh-pages/.nojekyll
