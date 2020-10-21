@@ -146,12 +146,14 @@ pbkdf
 pcap-format
 pecu
 ppx_expect
+progress
 prometheus
 #protocol-9p
 #protocol-9p-unix - irmin cconflict
 ptime
 randomconv
 re
+repr
 rfc1951
 rresult
 scrypt-kdf
