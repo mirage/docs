@@ -153,6 +153,7 @@ prometheus
 ptime
 randomconv
 re
+repr
 rfc1951
 rresult
 scrypt-kdf
